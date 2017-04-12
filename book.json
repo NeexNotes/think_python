@@ -1,10 +1,16 @@
 {
-    plugins: ["fontsettings"],
+    // ...
+
+    "plugins": [
+        // ...,
+        "analytics"
+    ],
+
     "pluginsConfig": {
-        "fontsettings": {
-            "theme": 'night', 
-            "family": 'sans', 
-            "size": 2
+        // ...,
+        "analytics": {
+            "google": "TOKEN-1",
+            "baidu": "TOKEN-2"
         }
     }
 }
