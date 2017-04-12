@@ -1,8 +1,5 @@
 {
-    plugins: ["-fontsettings"]
-}
-
-{
+    plugins: ["-fontsettings"],
     "pluginsConfig": {
         "fontsettings": {
             "theme": 'night', 
