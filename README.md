@@ -1,4 +1,7 @@
-# Notes from Think Python \(LaunchCode Edition\)
+# Think Python
+Notes from Think Python \(LaunchCode Edition\)
+
+
 
 
 

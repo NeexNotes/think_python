@@ -1,6 +1,22 @@
-## 2. Simple Python Data[¶](https://runestone.launchcode.org/runestone/static/thinkcspy/toc.html#simple-python-data)
+## Simple Python Data
+### Values and Data Types
 
-* [1. Values and Data Types](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/ValuesandDataTypes.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * [2. Type conversion functions](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/Typeconversionfunctions.html)
 * [3. Variables](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/Variables.html)
 * [4. Variable Names and Keywords](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/VariableNamesandKeywords.html)
