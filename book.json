@@ -1,0 +1,22 @@
+{
+    "plugins": [
+        "analytics",
+        "-autotheme",
+        "-fancybox",
+        "-lunr",
+        "-fontsettings",
+        "-sharing",
+        "-search"
+    ],
+
+    "pluginsConfig": {
+        "analytics": {
+            "google": "",
+            "baidu": ""
+        },
+        "fontSettings": {
+            "theme": "night"
+        }
+
+    }
+}
