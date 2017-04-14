@@ -12,6 +12,4 @@
 * [Lists](lists.md)
 * [Dictionaries](dictionaries.md)
 * [Classes and Objects](classes-and-objects.md)
-* [Glossary](glossary.md)
-
 
