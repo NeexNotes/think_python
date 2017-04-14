@@ -4,6 +4,7 @@
 * [General Intro](general-intro.md)
 * [Simple Python Data](simple-python-data.md)
 * [Debugging](debugging.md)
+    * [Debugging](debugging.md)
 * [Turtles](turtles.md)
 * [Functions](functions.md)
 * [Selection](selection.md)
