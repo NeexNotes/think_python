@@ -1,6 +1,25 @@
 ## 3. Debugging
+### What is Debugging?
 
-* [1. What is Debugging?](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/WhatisDebugging.html)
+**Debugging** is the process of tracking down and correcting erros in code. The erors are called **bugs**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * [2. Syntax errors](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/Syntaxerrors.html)
 * [3. Runtime Errors](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/RuntimeErrors.html)
 * [4. Semantic Errors](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/SemanticErrors.html)
