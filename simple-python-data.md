@@ -103,19 +103,73 @@ An **expression** is a combination of:
 
 Expressions need to be evaluated. If you ask Python to `print` an expression, the interpreter **evaluates** the expression and displays the result.
 
+**Evaluation of an expression** produces a value. A value all by itself is a simple expression, and so is a variable. Evaluating a variable gives the value that the variable refers to.
+
+**Statements**, such as the assignment statement, do not return a value.
+
+>  **evaluation of an expression** produces a value
+
+**UNDERPANTS** - statement just states something and Python is like "whatever, fine, i keep it". Expression is a statement + function to do sth with all that crap. So it grabs the statement and says, "oh, this is what you want me to do with it, OK, whatever"
+
+### Operators and Operands
+
+> operand operator operand
+>
+> 3                   +              4     
+
+#### List of arithmetic operators:
+* `+` addition
+* `-` subtraction
+* `*` multiplication
+* `/` division
+* `%` modulus
+* `**` exponent
+* `//` floor division, integer division
 
 
+### Order of operations
 
+1. Parentheses `()`
+2. Exponentiation `**`
+3. Multiplication/Division `*` `/` `//`
+4. Addition/Subtraction `+` `-`
 
-* [3. Variables](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/Variables.html)
-* [4. Variable Names and Keywords](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/VariableNamesandKeywords.html)
-* [5. Statements and Expressions](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/StatementsandExpressions.html)
-* [6. Operators and Operands](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/OperatorsandOperands.html)
-* [7. Input](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/Input.html)
-* [8. Order of Operations](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/OrderofOperations.html)
-* [9. Reassignment](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/Reassignment.html)
-* [10. Updating Variables](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/UpdatingVariables.html)
-* [11. Glossary](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/Glossary.html)
-* [12. Exercises](https://runestone.launchcode.org/runestone/static/thinkcspy/SimplePythonData/Exercises.html)
+**!!! Operators with the *same* precedence are evaluated from left-to-right (except exponent)**
 
+### Input
+
+```python
+name = input("What is your name?")
+print("Hello", name)
+```
+
+> It is very important to note that the `input` function returns a string value. 
+
+### Reassignment
+
+```python
+bruce = 5
+bruce = 7
+```
+
+![reassign](images/reassign.png)
+
+>  In some programming languages, a different symbol is used for assignment, such as `<-` or `:=`. The intent is that this will help to avoid confusion. Python chose to use the tokens `=`for assignment, and `==` for equality. This is a popular choice also found in languages like C, C++, Java, and C#.
+
+### Updating Variables
+
+```python
+age = 23 
+age = age + 1
+age += 1 # 25
+age *= 2 # 50
+age -= 1 # 49
+age /= 2 # 24.5
+```
+
+**increment** - adding 1
+
+**decrement** - subtracting 1
+
+**bumping** a variable  i.e. incrementing by 1
 
