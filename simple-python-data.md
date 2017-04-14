@@ -174,4 +174,3 @@ age /= 2 # 24.5
 **decrement** - subtracting 1
 
 **bumping** a variable  i.e. incrementing by 1
-

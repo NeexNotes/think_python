@@ -51,7 +51,16 @@ Start with **something**, and than make it better. Small steps approach.
 * test things as you go
 * think of boundary conditions
 
+Debugging tips:
 
+* read error messages, no really do!
+* use print statements
+
+> Our brain tends to see what we think is there.
+
+
+
+#### Errors in Python
 
 
 
