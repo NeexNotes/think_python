@@ -4,7 +4,6 @@
 * [General Intro](general-intro.md)
 * [Simple Python Data](simple-python-data.md)
 * [Debugging](debugging.md)
-    * [Errors](debugging.md####Errors)
 * [Turtles](turtles.md)
 * [Functions](functions.md)
 * [Selection](selection.md)
@@ -14,4 +13,3 @@
 * [Dictionaries](dictionaries.md)
 * [Classes and Objects](classes-and-objects.md)
 * [Glossary](GLOSSARY.md)
-
