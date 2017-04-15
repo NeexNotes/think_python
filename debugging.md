@@ -58,25 +58,19 @@ Debugging tips:
 
 > Our brain tends to see what we think is there.
 
+### Errors in Python
 
-
-#### Errors in Python
-
-
-
-
-
-
-* [2. Syntax errors](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/Syntaxerrors.html)
-* [3. Runtime Errors](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/RuntimeErrors.html)
-* [4. Semantic Errors](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/SemanticErrors.html)
-* [5. Experimental Debugging](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/ExperimentalDebugging.html)
-* [6. How to be a Successful Programmer](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/intro-HowtobeaSuccessfulProgrammer.html)
-* [7. How to Avoid Debugging](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/HowtoAvoidDebugging.html)
-* [8. Beginning tips for Debugging](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/BeginningtipsforDebugging.html)
-* [9. Know Your Error Messages](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/KnowyourerrorMessages.html)
-* [10. Summary](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/Summary.html)
-* [11. Exercises](https://runestone.launchcode.org/runestone/static/thinkcspy/Debugging/Exercises.html)
-
+1. **ParseError** - error in the syntax
+2. **TypeError** - try to combine two objects that are not compatible
+3. **NameError** - typo of any kind, in variable, in function, etc
+4. **ValueError** -  wrong value to work with, for example: `int("")`
+5. **URIError**
+6. **TokenError**
+7. **SyntaxError**
+8. **TimeLimitError**
+9. **IndentationError**
+10. **AttributeError**
+11. **ImportError**
+12. **IndexError**
 
 
