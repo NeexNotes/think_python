@@ -43,7 +43,7 @@ print(type(str(123.45)))
 
 **Assignment statements** create new variables and also give them values to refer to.
 
-```
+```python
 message = "What's up, Doc?"
 n = 17
 pi = 3.14159
@@ -133,8 +133,13 @@ Expressions need to be evaluated. If you ask Python to `print` an expression, th
 
 1. Parentheses `()`
 2. Exponentiation `**`
-3. Multiplication/Division `*` `/` `//`
+3. Multiplication/Division `*` `/` `//` `%`
 4. Addition/Subtraction `+` `-`
+5. Relational `==` `!=` `<=` `>=` `>` `<`
+6. Logical
+   1. `not`
+   2. `and`
+   3. `or`
 
 **!!! Operators with the **_**same**_** precedence are evaluated from left-to-right \(except exponent\)**
 

@@ -142,28 +142,3 @@ for a in xs:
 
 wn.exitonclick()
 ```
-
-
-
-* separate function definitions with two blank lines
-
-
-* ​
-* ​
-* ​
-* ​
-* [8. Program Development](https://runestone.launchcode.org/runestone/static/thinkcspy/Functions/ProgramDevelopment.html)
-* [9. Composition](https://runestone.launchcode.org/runestone/static/thinkcspy/Functions/Composition.html)
-* [10. A Turtle Bar Chart](https://runestone.launchcode.org/runestone/static/thinkcspy/Functions/ATurtleBarChart.html)
-* [11. Programming With Style](https://runestone.launchcode.org/runestone/static/thinkcspy/Functions/ProgrammingWithStyle.html)
-* [12. Glossary](https://runestone.launchcode.org/runestone/static/thinkcspy/Functions/Glossary.html)
-* [13. Exercises](https://runestone.launchcode.org/runestone/static/thinkcspy/Functions/Exercises.html)
-
-## 
-
-## 
-
-## 
-
-
-
