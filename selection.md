@@ -97,16 +97,3 @@ else:
 * Only a single (and optional) final `else` statement is allowed and it must be the last branch in the statement
 * Each condition is checked in order. If the first is false, the next is checked, and so on.
 * Even if **more than one condition is true**, only the first true branch executes.
-
-
-
-* [4. Conditional Execution: Binary Selection](https://runestone.launchcode.org/runestone/static/thinkcspy/Selection/ConditionalExecutionBinarySelection.html)
-* [5. Omitting theelseClause: Unary Selection](https://runestone.launchcode.org/runestone/static/thinkcspy/Selection/OmittingtheelseClauseUnarySelection.html)
-* [6. Nested conditionals](https://runestone.launchcode.org/runestone/static/thinkcspy/Selection/Nestedconditionals.html)
-* [7. Chained conditionals](https://runestone.launchcode.org/runestone/static/thinkcspy/Selection/Chainedconditionals.html)
-* [8. Boolean Functions](https://runestone.launchcode.org/runestone/static/thinkcspy/Selection/BooleanFunctions.html)
-* [9. Glossary](https://runestone.launchcode.org/runestone/static/thinkcspy/Selection/Glossary.html)
-* [10. Exercises](https://runestone.launchcode.org/runestone/static/thinkcspy/Selection/Exercises.html)
-
-
-
