@@ -1,6 +1,6 @@
 ## 6. Selection
 
-### Booleans (values and expressions)
+### Booleans \(values and expressions\)
 
 There are only two **boolean values**. They are `True` and `False`. They are called **boolean literals**. To work in Python must be capitalized. Type `<class 'bool'>`.
 
@@ -23,9 +23,9 @@ x >= y               # x is greater than or equal to y
 x <= y               # x is less than or equal to y
 ```
 
-The result of any expression evaluation can be returned by a function (using the `return` statement), functions can return boolean values aka. **boolean functions**.
+The result of any expression evaluation can be returned by a function \(using the `return` statement\), functions can return boolean values aka. **boolean functions**.
 
-It is common to give **boolean functions** names that sound like yes/no questions. 
+It is common to give **boolean functions** names that sound like yes/no questions.
 
 ```python
 def isDivisible(x, y):
@@ -47,7 +47,7 @@ number == 5 or number == 6 or number == 7
 # number == 5 or 6 or 7 will not work
 ```
 
-###  Conditional execution
+### Conditional execution
 
 #### `if` statement
 
@@ -59,13 +59,14 @@ else:
 ```
 
 #### `unary` selection
+the result of any expression evaluation can be returned by a function (using the `return` statement), functions can return boolean values
 
 ```python
-if x < 0:the result of any expression evaluation can be returned by a function (using the return statement), functions can return boolean values
+if x < 0:
     print("The negative number ",  x, " is not valid here.")
 ```
 
-In **unary selection** the else clause is omitted and nothing happens if the statement is `False`. 
+In **unary selection** the else clause is omitted and nothing happens if the statement is `False`.
 
 `else` block cannot be used by itself.
 
@@ -94,6 +95,9 @@ else:
     print("x and y must be equal")
 ```
 
-* Only a single (and optional) final `else` statement is allowed and it must be the last branch in the statement
+* Only a single \(and optional\) final `else` statement is allowed and it must be the last branch in the statement
 * Each condition is checked in order. If the first is false, the next is checked, and so on.
 * Even if **more than one condition is true**, only the first true branch executes.
+
+
+
