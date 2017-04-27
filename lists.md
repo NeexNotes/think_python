@@ -253,23 +253,119 @@ print(numbers)
 >>> [1, 4, 9, 16, 25]
 ```
 
+### Using lists as parameters
 
+Functions which take lists as arguments and change them during execution are called **modifiers** and the changes they make are called **side effects**. Passing a list as an argument actually passes a reference to the list, not a copy of the list.
 
-## 11. Lists, Continued
+```python
+def doubleStuff(aList):
+    """ Overwrite each element in aList with double its value. """
+    for position in range(len(aList)):
+        aList[position] = 2 * aList[position]
 
-* [1. Using Lists as Parameters](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/UsingListsasParameters.html)
-* [2. Pure Functions](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/PureFunctions.html)
-* [3. Which is Better?](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/WhichisBetter.html)
-* [4. Functions that Produce Lists](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/FunctionsthatProduceLists.html)
-* [5. List Comprehensions](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/ListComprehensions.html)
-* [6. Nested Lists](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/NestedLists.html)
-* [7. Strings and Lists](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/StringsandLists.html)
-* [8.`list`Type Conversion Function](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/listTypeConversionFunction.html)
-* [9. Tuples and Mutability](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/TuplesandMutability.html)
-* [10. Tuple Assignment](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/TupleAssignment.html)
-* [11. Tuples as Return Values](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/TuplesasReturnValues.html)
-* [12. Glossary](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/Glossary.html)
-* [13. Exercises](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/Exercises.html)
+things = [2, 5, 9]
+print(things)
+doubleStuff(things)
+print(things)
 
+>>> [2, 5, 9]
+>>> [4, 10, 18]
+```
 
+### Pure function
 
+> A **pure function** does not produce side effects. 
+
+It communicates with the calling program only through **parameters** (which it does not modify) and a **return value**.
+
+```python
+def doubleStuff(a_list):
+    """ Return a new list in which contains doubles of the elements in a_list. """
+    new_list = []
+    for value in a_list:
+        new_elem = 2 * value
+        new_list.append(new_elem)
+    return new_list
+
+things = [2, 5, 9]
+print(things)
+things = doubleStuff(things)
+print(things)
+```
+
+### Functional programming
+
+Anything that can be done with **modifiers** can also be done with **pure functions**. In fact, some programming languages only allow pure functions. There is some evidence that programs that use pure functions are faster to develop and less error-prone than programs that use modifiers. Nevertheless, modifiers are convenient at times, and in some cases, functional programs are less efficient.
+
+In general, we recommend that you write pure functions whenever it is reasonable to do so and resort to modifiers only if there is a compelling advantage. This approach might be called a **functional programming style**.
+
+### List Comprehensions
+
+List comprehensions are concise ways to create lists. The general syntax is:
+
+```python
+[<expression> for <item> in <sequence> if  <condition>] # if is optional. 
+```
+
+```python
+mylist = [1,2,3,4,5]
+yourlist = [item ** 2 for item in mylist]
+print(yourlist)
+
+>>> [1, 4, 9, 16, 25]
+```
+
+using the `if` clause (assuming you have access to `is_prime()` function:
+
+```python
+[num for num in range(2,n) if is_prime(num)]
+```
+
+### Lists and strings
+
+```python
+string = "Hello you, how are you?"
+string.split() 							# by default breaks on space
+```
+
+An optional argument called a **delimiter** can be used to specify which characters to use as word boundaries. The delimiter does not appear in the results.
+
+```python
+song = "The rain in Spain..."
+wds = song.split('ai')
+print(wds)
+
+>>> ['The r', 'n in Sp', 'n...']
+```
+
+Joining back (after some changes):
+
+```python
+wds = ["red", "blue", "green"]
+glue = ';'
+s = glue.join(wds)
+print(s)
+print(wds)
+
+print("***".join(wds))
+print("".join(wds))
+
+>>> red;blue;green
+>>> ['red', 'blue', 'green']
+>>> red***blue***green
+>>> redbluegreen
+```
+
+#### Type conversion. To list. `list()`
+
+```python
+xs = list("Crunchy Frog")
+print(xs)
+
+>>> ['C', 'r', 'u', 'n', 'c', 'h', 'y', ' ', 'F', 'r', 'o', 'g']
+```
+
+It is not legal to use the `list`conversion function on any argument that is not a sequence.
+
+* `split` will break a string into a list of “words”
+* `list` will always break it into a list of characters

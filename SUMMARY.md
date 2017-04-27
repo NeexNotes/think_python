@@ -9,8 +9,8 @@
 * [Iteration, Bool, Selection](selection.md)
 * [Strings](strings.md)
 * [Lists](lists.md)
+* [Tuples](tuples.md)
 * [References](memory-reference.md)
 * [Dictionaries](dictionaries.md)
 * [Classes and Objects](classes-and-objects.md)
 * [Glossary](GLOSSARY.md)
-
