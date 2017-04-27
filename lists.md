@@ -177,34 +177,83 @@ print(alist)
 >>> ['a', 'b', 'c', 'd', 'e', 'f']
 ```
 
+### Clone (copy) list
+
+```python
+a = [81, 82, 83]
+b = a[:] 
+print(a == b)
+print(a is b)
+
+>>> True
+>>> False
+```
+
+### List Methods
+
+```python
+mylist = [5, 12, 27, 3, 12]			# [5, 12, 27, 3, 12]
+mylist.append(5)					# [5, 12, 27, 3, 12, 5]
+mylist.insert(1, 12)				# [5, 12, 12, 27, 3, 12, 5]
+mylist.index(3)						# 4
+mylist.count(5)						# 2
+mylist.reverse()					# [5, 12, 3, 27, 12, 12, 5]
+mylist.sort()						# [3, 5, 5, 12, 12, 12, 27]
+mylist.remove(5)				    # [3, 5, 12, 12, 12, 27]
+lastitem = mylist.pop()				# [3,5,12,12,12]
+print(lastitem)						# 27
+```
+
+The word **mutator** means that the list is changed by the method but nothing is returned (actually `None` is returned). A **hybrid** method is one that not only changes the list but also returns a value as its result. Finally, if the result is simply a return, then the list is unchanged by the method.
+
+| Method  | Parameters     | Result     | Description                              |
+| ------- | -------------- | ---------- | ---------------------------------------- |
+| append  | item           | mutator    | Adds a new item to the end of a list     |
+| insert  | position, item | mutator    | Inserts a new item at the position given |
+| pop     | none           | hybrid     | Removes and returns the last item        |
+| pop     | position       | hybrid     | Removes and returns the item at position |
+| sort    | none           | mutator    | Modifies a list to be sorted             |
+| reverse | none           | mutator    | Modifies a list to be in reverse order   |
+| index   | item           | return idx | Returns the position of first occurrence of item |
+| count   | item           | return ct  | Returns the number of occurrences of item |
+| remove  | item           | mutator    | Removes the first occurrence of item     |
+
+[More in documentation](https://docs.python.org/3/library/stdtypes.html#sequence-types-str-bytes-bytearray-list-tuple-range)
+
+It is important to remember that methods like `append`, `sort`, and `reverse` all return `None`. Do not use them for reassignment !!!
+
+### List traversal
+
+```python
+fruits = ["apple", "orange", "banana", "cherry"]
+
+for fruit in fruits:     # by item
+    print(fruit)
+```
+
+```python
+fruits = ["apple", "orange", "banana", "cherry"]
+
+for position in range(len(fruits)):     # by index
+    print(fruits[position])
+```
+
+Since lists are mutable, it is often desirable to traverse a list, modifying each of its elements as you go. 
+
+```python
+numbers = [1, 2, 3, 4, 5]
+print(numbers)
+
+for i in range(len(numbers)):
+    numbers[i] = numbers[i] ** 2
+
+print(numbers)
+
+>>> [1, 2, 3, 4, 5]
+>>> [1, 4, 9, 16, 25]
+```
 
 
-
-
-* 1. ​
-  2. ​
-  3. ​
-  4. ​
-  5. ​
-  6. ​
-  7. ​
-  8. ​
-  9. Lists](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/Lists.html)
-* [2. List Length](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/ListLength.html)
-* [3. Accessing Elements](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/AccessingElements.html)
-* [4. List Membership](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/ListMembership.html)
-* [5. Concatenation and Repetition](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/ConcatenationandRepetition.html)
-* [6. List Slices](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/ListSlices.html)
-* [7. Lists are Mutable](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/ListsareMutable.html)
-* [8. List Deletion](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/ListDeletion.html)
-* [9. Objects and References](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/ObjectsandReferences.html)
-* [10. Aliasing](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/Aliasing.html)
-* [11. Cloning Lists](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/CloningLists.html)
-* [12. Repetition and References](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/RepetitionandReferences.html)
-* [13. List Methods](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/ListMethods.html)
-* [14. Append versus Concatenate](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/AppendversusConcatenate.html)
-* [15. Lists and`for`loops](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/Listsandforloops.html)
-* [16. Exercises](https://runestone.launchcode.org/runestone/static/thinkcspy/Lists/Exercises.html)
 
 ## 11. Lists, Continued
 
