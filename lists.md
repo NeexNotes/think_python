@@ -1,4 +1,4 @@
-## 10. Lists
+## 10. Lists (mutable)
 
 A **list** is a sequential collection of Python data values, where each value is identified by an **index**. The values that make up a list are called its **elements**.
 

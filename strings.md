@@ -1,4 +1,4 @@
-## 8. Strings
+## 8. Strings (immutable)
 
 Types that are comprised of smaller pieces are called **collection data types**. 
 
