@@ -226,6 +226,56 @@ print(p.distanceFromOrigin())
 
 >>> 9.21954445729
 ```
+### passing objects into functions
+
+Here is a simple function called `distance` involving our new Point objects. The job of this function is to figure out the distance between two points.
+
+```python
+import math
+
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+def distance(point1, point2):
+    xdiff = point2.getX() - point1.getX()
+    ydiff = point2.getY() - point1.getY()
+
+    dist = math.sqrt(xdiff**2 + ydiff**2)
+    return dist
+
+p = Point(4, 3)
+q = Point(0, 0)
+print(distance(p, q))
+
+>>> 5.0
+```
+
+### Converting an Object to a String¶
+
+When we’re working with classes and objects, it is often necessary to print an object (that is to print the state of an object).
+
+```python
+p = Point(7, 6)
+print(p)
+```
+
+This does not work.
+
+
 
 
 
