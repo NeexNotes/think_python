@@ -264,13 +264,19 @@ print(distance(p, q))
 >>> 5.0
 ```
 
-### Converting an Object to a String¶
+### Converting an Object to a String
 
 When we’re working with classes and objects, it is often necessary to print an object (that is to print the state of an object).
 
 This does not work.
 
+```python
+p = Point(7, 6)
+print(p)
 
+>>> <__main__.Point object>
+```
+This does not work.
 
 
 
