@@ -575,8 +575,8 @@ A mapping type is a data type comprised of a collection of keys and associated v
 
 
 
-* * * 
-* 
+* * * ​
+* ​
 # 10. Glossary
 
 attribute
@@ -627,3 +627,20 @@ object-oriented language
 
 A language that provides features, such as user-defined classes and inheritance, that facilitate object-oriented programming.
 
+* deep copy
+
+  To copy the contents of an object as well as any embedded objects, and any objects embedded in them, and so on; implemented by the `deepcopy` function in the `copy` module.
+
+* deep equality
+
+  Equality of values, or two references that point to objects that have the same value.
+
+* shallow copy
+
+  To copy the contents of an object, including any references to embedded objects; implemented by the `copy` function in the `copy` module.
+
+* shallow equality
+
+  Equality of references, or two references that point to the same object.
+
+[**](https://runestone.launchcode.org/runestone/static/thinkcspy/ClassesDiggingDeeper/Inheritance.html)
