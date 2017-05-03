@@ -1,4 +1,4 @@
-# Glossary 
+# Glossary
 
 # activecode
 
@@ -264,8 +264,6 @@ A name given to a variable. Variable names in Python consist of a sequence of le
 
 ## Turtle
 
-
-
 * attribute
 
   Some state or value that belongs to a particular object. For example, tess has a color.
@@ -276,7 +274,7 @@ A name given to a variable. Variable names in Python consist of a sequence of le
 
 * control flow
 
-  See *flow of execution* in the next chapter.
+  See _flow of execution_ in the next chapter.
 
 * deterministic
 
@@ -288,7 +286,7 @@ A name given to a variable. Variable names in Python consist of a sequence of le
 
 * for loop
 
-  A statement in Python for convenient repetition of statements in the *body* of the loop.
+  A statement in Python for convenient repetition of statements in the _body_ of the loop.
 
 * instance
 
@@ -296,11 +294,11 @@ A name given to a variable. Variable names in Python consist of a sequence of le
 
 * invoke
 
-  An object has methods. We use the verb invoke to mean *activate the method*. Invoking a method is done by putting parentheses after the method name, with some possible arguments. So`wn.exitonclick()` is an invocation of the `exitonclick` method.
+  An object has methods. We use the verb invoke to mean _activate the method_. Invoking a method is done by putting parentheses after the method name, with some possible arguments. So`wn.exitonclick()` is an invocation of the `exitonclick` method.
 
 * iteration
 
-  A basic building block for algorithms (programs). It allows steps to be repeated. Sometimes called *looping*.
+  A basic building block for algorithms \(programs\). It allows steps to be repeated. Sometimes called _looping_.
 
 * loop body
 
@@ -316,7 +314,7 @@ A name given to a variable. Variable names in Python consist of a sequence of le
 
 * module
 
-  A file containing Python definitions and statements intended for use in other Python programs. The contents of a module are made available to the other program by using the *import* statement.
+  A file containing Python definitions and statements intended for use in other Python programs. The contents of a module are made available to the other program by using the _import_ statement.
 
 * object
 
@@ -356,17 +354,15 @@ A name given to a variable. Variable names in Python consist of a sequence of le
 
 * turtle
 
-  A data object used to create pictures (known as turtle graphics).
+  A data object used to create pictures \(known as turtle graphics\).
 
 #### hdsafdjfd
 
-
-
 * chatterbox function
 
-  A function which interacts with the user (using `input` or `print`) when it should not. Silent functions that just convert their input arguments into their output results are usually the most useful ones.
+  A function which interacts with the user \(using `input` or `print`\) when it should not. Silent functions that just convert their input arguments into their output results are usually the most useful ones.
 
-* composition (of functions)
+* composition \(of functions\)
 
   Calling one function from within the body of another, or using the return value of one function as an argument to the call of another.
 
@@ -446,13 +442,11 @@ One of the operators that combines boolean expressions: `and`, `or`, and `not`.
 
 modulus operator
 
-An operator, denoted with a percent sign ( `%`), that works on integers and yields the remainder when one number is divided by another.
+An operator, denoted with a percent sign \( `%`\), that works on integers and yields the remainder when one number is divided by another.
 
 nesting
 
 One program structure within another, such as a conditional statement inside a branch of another conditional statement.
-
-
 
 * collection data type
 
@@ -480,7 +474,7 @@ One program structure within another, such as a conditional statement inside a b
 
 * slice
 
-  A part of a string (substring) specified by a range of indices. More generally, a subsequence of any sequence type in Python can be created using the slice operator (`sequence[start:stop]`).
+  A part of a string \(substring\) specified by a range of indices. More generally, a subsequence of any sequence type in Python can be created using the slice operator \(`sequence[start:stop]`\).
 
 * traverse
 
@@ -490,9 +484,9 @@ One program structure within another, such as a conditional statement inside a b
 
   Any of the characters that move the cursor without printing visible characters. The constant `string.whitespace` contains all the white-space characters.
 
-[**](https://runestone.launchcode.org/runestone/static/thinkcspy/StringsContinued/Summary.html)
+[\*\*](https://runestone.launchcode.org/runestone/static/thinkcspy/StringsContinued/Summary.html)
 
-[**](https://runestone.launchcode.org/runestone/static/thinkcspy/StringsContinued/Exercises.html)
+[\*\*](https://runestone.launchcode.org/runestone/static/thinkcspy/StringsContinued/Exercises.html)
 
 * aliases
 
@@ -508,7 +502,7 @@ One program structure within another, such as a conditional statement inside a b
 
 * element
 
-  One of the values in a list (or other sequence). The bracket operator selects elements of a list.
+  One of the values in a list \(or other sequence\). The bracket operator selects elements of a list.
 
 * index
 
@@ -558,9 +552,8 @@ One program structure within another, such as a conditional statement inside a b
 
   A sequential collection of items, similar to a list. Any python object can be an element of a tuple. However, unlike a list, tuples are immutable.
 
-
-* [**](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/TuplesasReturnValues.html)
-* [**](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/Exercises.html)
+* [\*\*](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/TuplesasReturnValues.html)
+* [\*\*](https://runestone.launchcode.org/runestone/static/thinkcspy/ListsContinued/Exercises.html)
 
 dictionary
 
@@ -568,7 +561,7 @@ A collection of key-value pairs that maps from keys to values. The keys can be a
 
 key
 
-A data item that is *mapped to* a value in a dictionary. Keys are used to look up values in a dictionary.
+A data item that is _mapped to_ a value in a dictionary. Keys are used to look up values in a dictionary.
 
 key-value pair
 
@@ -577,3 +570,60 @@ One of the pairs of items in a dictionary. Values are looked up in a dictionary 
 mapping type
 
 A mapping type is a data type comprised of a collection of keys and associated values. Python’s only built-in mapping type is the dictionary. Dictionaries implement the [associative array](http://en.wikipedia.org/wiki/Associative_array) abstract data type.
+
+
+
+
+
+* * * 
+* 
+# 10. Glossary
+
+attribute
+
+One of the named data items that makes up an instance.
+
+class
+
+A user-defined compound type. A class can also be thought of as a template for the objects that are instances of it.
+
+constructor
+
+Every class has a “factory”, called by the same name as the class, for making new instances. If the class has an
+
+_initializer method_
+
+, this method is used to get the attributes \(i.e. the state\) of the new object properly set up.
+
+initializer method
+
+A special method in Python \(called
+
+`__init__`
+
+\) that is invoked automatically to set a newly-created object’s attributes to their initial \(factory-default\) state.
+
+instance
+
+An object whose type is of some class. Instance and object are used interchangeably.
+
+instantiate
+
+To create an instance of a class, and to run its initializer.
+
+method
+
+A function that is defined inside a class definition and is invoked on instances of that class.
+
+object
+
+A compound data type that is often used to model a thing or concept in the real world. It bundles together the data and the operations that are relevant for that kind of data. Instance and object are used interchangeably.
+
+object-oriented programming
+
+A powerful style of programming in which data and the operations that manipulate it are organized into classes and methods.
+
+object-oriented language
+
+A language that provides features, such as user-defined classes and inheritance, that facilitate object-oriented programming.
+
