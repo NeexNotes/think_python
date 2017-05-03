@@ -159,7 +159,7 @@ The combined process of “make me a new object” and “get its settings initi
 We can make our class constructor more general by putting extra parameters into the`__init__`method.
 
 ```python
-Class Point:
+class Point:
     """ Point class for representing and manipulating x,y coordinates. """
 
     def __init__(self, initX, initY):
@@ -171,6 +171,64 @@ Class Point:
 ```
 
 Now when we create new points, we supply the x and y coordinates as parameters.
+
+#### Add methods
+Let’s add two simple methods to allow a point to give us information about its state.
+
+##### importance of self
+
+One thing to notice is that even though the `getX` method does not need any other parameter information to do its work, there is still one formal parameter, `self`. As we stated earlier, all methods defined in a class that operate on objects of that class will have `self` as their first parameter. Again, this serves as reference to the object itself which in turn gives access to the state data inside the object.
+
+```python
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+
+p = Point(7, 6)
+print(p.getX())
+print(p.getY())
+```
+
+Let's add `distanceFromOrigin` that will calculate the distance. It uses diagonal formula for polygon (przekątną prostokąta).
+
+```python
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+
+p = Point(7, 6)
+print(p.distanceFromOrigin())
+
+>>> 9.21954445729
+```
+
+
+
 
   
 
