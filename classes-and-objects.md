@@ -148,17 +148,30 @@ Every class automatically uses the name of the class as the name of the construc
 
 When the constructor function is invoked, a new instance of Point or Turtle is created, and then inside the `__init__` function you have the opportunity to configure the new instance into some kind of reasonable “default starting state”.
 
-> It may be helpful to think of a class as a **factory** for making objects. 
+> It may be helpful to think of a class as a **factory** for making objects.
 >
 > The class itself isn’t an instance of a point, but it contains the machinery to make point instances. Every time you call the constructor, you’re asking the factory to make you a new object. As the object comes off the production line, its initialization method is executed in order to get the object properly set up with its factory default settings.
 
 The combined process of “make me a new object” and “get its settings initialized to the factory default settings” is called **instantiation**.
 
+### Adding functionality to constructor
 
+We can make our class constructor more general by putting extra parameters into the`__init__`method.
 
+```python
+Class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
 
+    def __init__(self, initX, initY):
+        """ Create a new point at the given coordinates. """
+        self.x = initX
+        self.y = initY
+	
+	p = Point(7, 6)
+```
 
+Now when we create new points, we supply the x and y coordinates as parameters.
 
-
+  
 
 
