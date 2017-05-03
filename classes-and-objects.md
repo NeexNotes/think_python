@@ -268,11 +268,6 @@ print(distance(p, q))
 
 When we’re working with classes and objects, it is often necessary to print an object (that is to print the state of an object).
 
-```python
-p = Point(7, 6)
-print(p)
-```
-
 This does not work.
 
 
