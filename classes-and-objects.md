@@ -8,3 +8,17 @@ In OOP, computer programs are designed by making them out of objects that intera
 
 Other [programming paradigms](https://en.wikipedia.org/wiki/Programming_paradigm).
 
+### A change of perspective
+**Functions vs Objects:**
+```python
+tess.forward(100)
+# vs.
+forward(tess, 100)
+```
+* Hey tess object, can you move forward 100 steps.
+* Hey forward function, can you move tess 100 steps.
+
+It may not initially be obvious that it is useful. But it turns out that often times shifting responsibility from the functions onto the objects makes it possible to write more versatile functions and makes it easier to maintain and reuse code.
+
+The most important advantage of the object-oriented style is that it fits our **mental chunking** and real-life experience more accurately. In real life our **cook** method is part of our **microwave oven** — we **don’t have a cook function sitting in the corner** of the kitchen, into which **we pass the microwave!**
+
