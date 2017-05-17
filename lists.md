@@ -1,4 +1,4 @@
-## 10. Lists (mutable)
+## 10. Lists \(mutable\)
 
 A **list** is a sequential collection of Python data values, where each value is identified by an **index**. The values that make up a list are called its **elements**.
 
@@ -11,10 +11,10 @@ Closing things in `[]` square brackets:
 ```python
 [10, 20, 30, 40]
 ["spam", "bungee", "swallow"]
-["hello", 2.0, 5, [10, 20]] 		# nested list
-[] 									# empty list
-a = ["a", 1] 						# variable holding a list 
-print(a)							# passing list to functions as parameters
+["hello", 2.0, 5, [10, 20]]         # nested list
+[]                                     # empty list
+a = ["a", 1]                         # variable holding a list 
+print(a)                            # passing list to functions as parameters
 ```
 
 A list within another list is said to be **nested**. The inner list is a **sublist**.
@@ -88,7 +88,7 @@ print(1 in fruit)
 >>> False
 ```
 
-### Concatenation and Repetition (Multiplication)
+### Concatenation and Repetition \(Multiplication\)
 
 ```python
 fruit = ["apple", "orange", "banana", "cherry"]
@@ -114,9 +114,9 @@ id(alist)
 
 ### MUTABILITY
 
-Unlike strings, lists are **mutable**. 
+Unlike strings, lists are **mutable**.
 
-This means we can change an item in a list by accessing it directly as part of the assignment statement. Using the **indexing operator** (square brackets) on the left side of an assignment, we can update one of the list items. 
+This means we can change an item in a list by accessing it directly as part of the assignment statement. Using the **indexing operator** \(square brackets\) on the left side of an assignment, we can update one of the list items.
 
 An assignment to an element of a list is called **item assignment**.
 
@@ -162,7 +162,7 @@ print(a)
 >>> ['one', 'three']
 ```
 
-**Alert!** `del` causes a runtime error if the index is out of range. But so does reassignment using `[]`. 
+**Alert!** `del` causes a runtime error if the index is out of range. But so does reassignment using `[]`.
 
 ### Insert items
 
@@ -177,7 +177,7 @@ print(alist)
 >>> ['a', 'b', 'c', 'd', 'e', 'f']
 ```
 
-### Clone (copy) list
+### Clone \(copy\) list
 
 ```python
 a = [81, 82, 83]
@@ -192,31 +192,31 @@ print(a is b)
 ### List Methods
 
 ```python
-mylist = [5, 12, 27, 3, 12]			# [5, 12, 27, 3, 12]
-mylist.append(5)					# [5, 12, 27, 3, 12, 5]
-mylist.insert(1, 12)				# [5, 12, 12, 27, 3, 12, 5]
-mylist.index(3)						# 4
-mylist.count(5)						# 2
-mylist.reverse()					# [5, 12, 3, 27, 12, 12, 5]
-mylist.sort()						# [3, 5, 5, 12, 12, 12, 27]
-mylist.remove(5)				    # [3, 5, 12, 12, 12, 27]
-lastitem = mylist.pop()				# [3,5,12,12,12]
-print(lastitem)						# 27
+mylist = [5, 12, 27, 3, 12]            # [5, 12, 27, 3, 12]
+mylist.append(5)                    # [5, 12, 27, 3, 12, 5]
+mylist.insert(1, 12)                # [5, 12, 12, 27, 3, 12, 5]
+mylist.index(3)                        # 4
+mylist.count(5)                        # 2
+mylist.reverse()                    # [5, 12, 3, 27, 12, 12, 5]
+mylist.sort()                        # [3, 5, 5, 12, 12, 12, 27]
+mylist.remove(5)                    # [3, 5, 12, 12, 12, 27]
+lastitem = mylist.pop()                # [3,5,12,12,12]
+print(lastitem)                        # 27
 ```
 
-The word **mutator** means that the list is changed by the method but nothing is returned (actually `None` is returned). A **hybrid** method is one that not only changes the list but also returns a value as its result. Finally, if the result is simply a return, then the list is unchanged by the method.
+The word **mutator** means that the list is changed by the method but nothing is returned \(actually `None` is returned\). A **hybrid** method is one that not only changes the list but also returns a value as its result. Finally, if the result is simply a return, then the list is unchanged by the method.
 
-| Method  | Parameters     | Result     | Description                              |
-| ------- | -------------- | ---------- | ---------------------------------------- |
-| append  | item           | mutator    | Adds a new item to the end of a list     |
-| insert  | position, item | mutator    | Inserts a new item at the position given |
-| pop     | none           | hybrid     | Removes and returns the last item        |
-| pop     | position       | hybrid     | Removes and returns the item at position |
-| sort    | none           | mutator    | Modifies a list to be sorted             |
-| reverse | none           | mutator    | Modifies a list to be in reverse order   |
-| index   | item           | return idx | Returns the position of first occurrence of item |
-| count   | item           | return ct  | Returns the number of occurrences of item |
-| remove  | item           | mutator    | Removes the first occurrence of item     |
+| Method | Parameters | Result | Description |
+| --- | --- | --- | --- |
+| append | item | mutator | Adds a new item to the end of a list |
+| insert | position, item | mutator | Inserts a new item at the position given |
+| pop | none | hybrid | Removes and returns the last item |
+| pop | position | hybrid | Removes and returns the item at position |
+| sort | none | mutator | Modifies a list to be sorted |
+| reverse | none | mutator | Modifies a list to be in reverse order |
+| index | item | return idx | Returns the position of first occurrence of item |
+| count | item | return ct | Returns the number of occurrences of item |
+| remove | item | mutator | Removes the first occurrence of item |
 
 [More in documentation](https://docs.python.org/3/library/stdtypes.html#sequence-types-str-bytes-bytearray-list-tuple-range)
 
@@ -238,7 +238,7 @@ for position in range(len(fruits)):     # by index
     print(fruits[position])
 ```
 
-Since lists are mutable, it is often desirable to traverse a list, modifying each of its elements as you go. 
+Since lists are mutable, it is often desirable to traverse a list, modifying each of its elements as you go.
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -274,9 +274,9 @@ print(things)
 
 ### Pure function
 
-> A **pure function** does not produce side effects. 
+> A **pure function** does not produce side effects.
 
-It communicates with the calling program only through **parameters** (which it does not modify) and a **return value**.
+It communicates with the calling program only through **parameters** \(which it does not modify\) and a **return value**.
 
 ```python
 def doubleStuff(a_list):
@@ -304,7 +304,7 @@ In general, we recommend that you write pure functions whenever it is reasonable
 List comprehensions are concise ways to create lists. The general syntax is:
 
 ```python
-[<expression> for <item> in <sequence> if  <condition>] # if is optional. 
+[<expression> for <item> in <sequence> if  <condition>] # if is optional.
 ```
 
 ```python
@@ -315,17 +315,50 @@ print(yourlist)
 >>> [1, 4, 9, 16, 25]
 ```
 
-using the `if` clause (assuming you have access to `is_prime()` function:
+using the `if` clause \(assuming you have access to `is_prime()` function:
 
 ```python
 [num for num in range(2,n) if is_prime(num)]
 ```
 
+#### List comprehension explained with an example: 
+**Problem**: 
+You have to print a list of all possible coordinates given a 3D grid where the sum of x,y,z is != N
+
+for x=y=z=1 and N=2  
+**output**:  
+`[[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]` 
+
+Standard loop solution:
+```python
+x = 1
+y = 1
+z = 1
+n = 2
+grid = []
+
+for a in range(x + 1):
+    for b in range(y + 1):
+        for c in range(z + 1):
+            if a + b + c != n:
+                grid.append([a, b, c])
+print(grid)
+>>> [[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
+```
+List comprehension solution
+```python
+x = 1
+y = 1
+z = 1
+n = 2
+
+print([[a,b,c] for a in range(x+1) for b in range(y+1) for c in range(z+1) if a+b+c != n])
+```
 ### Lists and strings
 
 ```python
 string = "Hello you, how are you?"
-string.split() 							# by default breaks on space
+string.split()                             # by default breaks on space
 ```
 
 An optional argument called a **delimiter** can be used to specify which characters to use as word boundaries. The delimiter does not appear in the results.
@@ -338,7 +371,7 @@ print(wds)
 >>> ['The r', 'n in Sp', 'n...']
 ```
 
-Joining back (after some changes):
+Joining back \(after some changes\):
 
 ```python
 wds = ["red", "blue", "green"]
@@ -369,4 +402,6 @@ It is not legal to use the `list`conversion function on any argument that is not
 
 * `split` will break a string into a list of “words”
 * `list` will always break it into a list of characters
+
+
 
