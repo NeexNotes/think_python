@@ -1,4 +1,4 @@
-## 13. Classes and Objects (mutable)
+## 13. Classes and Objects \(mutable\)
 
 Object-oriented programming \(OOP\) is a programming paradigm based on the concept of **"objects"**, which may contain data, in the form of fields, often known as **attributes**; and code, in the form of procedures, often known as **methods**.
 
@@ -166,13 +166,14 @@ class Point:
         """ Create a new point at the given coordinates. """
         self.x = initX
         self.y = initY
-	
-	p = Point(7, 6)
+
+    p = Point(7, 6)
 ```
 
 Now when we create new points, we supply the x and y coordinates as parameters.
 
 #### Add methods
+
 Let’s add two simple methods to allow a point to give us information about its state.
 
 ##### importance of self
@@ -200,7 +201,7 @@ print(p.getX())
 print(p.getY())
 ```
 
-Let's add `distanceFromOrigin` that will calculate the distance. It uses diagonal formula for polygon (przekątną prostokąta).
+Let's add `distanceFromOrigin` that will calculate the distance. It uses diagonal formula for polygon \(przekątną prostokąta\).
 
 ```python
 class Point:
@@ -226,6 +227,7 @@ print(p.distanceFromOrigin())
 
 >>> 9.21954445729
 ```
+
 ### passing objects into functions
 
 Here is a simple function called `distance` involving our new Point objects. The job of this function is to figure out the distance between two points.
@@ -266,7 +268,7 @@ print(distance(p, q))
 
 ### Converting an Object to a String
 
-When we’re working with classes and objects, it is often necessary to print an object (that is to print the state of an object).
+When we’re working with classes and objects, it is often necessary to print an object \(that is to print the state of an object\).
 
 This does not work.
 
@@ -276,6 +278,7 @@ print(p)
 
 >>> <__main__.Point object>
 ```
+
 This does not work the way we would most likely want it. The print function shown above produces a **string representation** of the Point `p`. The default functionality provided by Python tells you that p is an object of type Point. However, it does not tell you anything about the specific state of the point.
 
 We can improve on this representation if we include a special method call `__str__`. Notice that this method uses the same naming convention as the constructor, that is two underscores before and after the name. It is common that Python uses this naming technique for special methods.
@@ -309,7 +312,8 @@ print(p)
 >>> x=7, y=6
 ```
 
-### Overriding Python functionality 
+### Overriding Python functionality
+
 Now, you ask, don’t we already have an `str` type converter that can turn our object into a string? Yes we do!
 
 And doesn’t print automatically use this when printing things? Yes again!
@@ -358,9 +362,9 @@ print(mid.getY())
 
 ### Fractions
 
-A fraction is most commonly thought of as two integers, one over the other, with a line separating them. 
+A fraction is most commonly thought of as two integers, one over the other, with a line separating them.
 
-The number on the **top** is called the **numerator** and the number on the **bottom** is called the **denominator** => numerator/denominator
+The number on the **top** is called the **numerator** and the number on the **bottom** is called the **denominator** =&gt; numerator/denominator
 
 To design our class, we simply need to use the analysis above to realize that the state of a fraction object can be completely described by representing two integers.
 
@@ -464,9 +468,9 @@ def sameFraction(f1, f2):
     return (f1.getNum() == f2.getNum()) and (f1.getDen() == f2.getDen())
 ```
 
-This type of equality is known as **deep equality** since it compares the values *deep* in the object, not just the reference to the object.
+This type of equality is known as **deep equality** since it compares the values _deep_ in the object, not just the reference to the object.
 
-### !!! ALERT `==` isn't always testing the same way 
+### !!! ALERT `==` isn't always testing the same way
 
 ```python
 p = Point(4, 2)
@@ -504,7 +508,7 @@ def __add__(self, otherfraction):
 
     common = gcd(newnum, newden)
 
-    return Fraction(newnum // common, newden // common)	
+    return Fraction(newnum // common, newden // common)    
 
 f1 = Fraction(1, 2)
 f2 = Fraction(1, 4)
@@ -556,7 +560,7 @@ print("After eating again, tom says:", tom.noise())
 
 Now let’s say we want to create another class to represent a tiger. Tigers will be pretty similar to cats, except for the following additions:
 
-* tigers can be *angry*. Specifically, a tiger is angry whenever it is both hungry and tired.
+* tigers can be _angry_. Specifically, a tiger is angry whenever it is both hungry and tired.
 * If a tiger is angry, its noise is `"GRRRR!"`.
 
 How should we go about implementing this `Tiger` class?  The naive solution would be to copy and paste our `Cat` class, and then modify things as necessary:
@@ -605,9 +609,9 @@ hobbes.eat()
 print("After eating again, hobbes says:", hobbes.noise())
 ```
 
-Ideally there should be some way of defining a `Tiger` class without having to repeat all the aspects that we already defined in the `Cat` class. We want to be able to say “A Tiger is exactly like a Cat, except for a few additions and modifications, which are: [blah blah blah]”.
+Ideally there should be some way of defining a `Tiger` class without having to repeat all the aspects that we already defined in the `Cat` class. We want to be able to say “A Tiger is exactly like a Cat, except for a few additions and modifications, which are: \[blah blah blah\]”.
 
-This is exactly what inheritance allows us to do. Inheritance is a syntax for defining a custom class that *inherits* much of its structure and behavior from some other class. In our example, the `Tiger` class inherits much of its structure and behavior from the `Cat` class. Here’s how we can implement that relationship in Python:
+This is exactly what inheritance allows us to do. Inheritance is a syntax for defining a custom class that _inherits_ much of its structure and behavior from some other class. In our example, the `Tiger` class inherits much of its structure and behavior from the `Cat` class. Here’s how we can implement that relationship in Python:
 
 ```python
 class Cat:
@@ -669,17 +673,112 @@ print("After eating again, hobbes says:", hobbes.noise())
       # method definitions for MySubclass
   ```
 
-* Our `Tiger` definition is very short. This is because we *only* needed to define the things that distinguish a `Tiger` from a `Cat`. Specifically, we added a new method, `angry`, and we modified an existing method, `noise`. That’s all. The important point is that we were able to create a `Tiger`named `hobbes` and command him to eat and sleep, *without* having to write any code in our `Tiger`class to define the `eat`, `sleep` or `__init__` methods, or the `tired` and `hungry` attributes. We get to use all those methods and attributes “for free” just by virtue of inheriting from the `Cat` class.
+* Our `Tiger` definition is very short. This is because we _only_ needed to define the things that distinguish a `Tiger` from a `Cat`. Specifically, we added a new method, `angry`, and we modified an existing method, `noise`. That’s all. The important point is that we were able to create a `Tiger`named `hobbes` and command him to eat and sleep, _without_ having to write any code in our `Tiger`class to define the `eat`, `sleep` or `__init__` methods, or the `tired` and `hungry` attributes. We get to use all those methods and attributes “for free” just by virtue of inheriting from the `Cat` class.
 
-* The `Tiger` class *overrides* the `noise` method. When we invoke `hobbes.noise()`, we are invoking the `Tiger.noise` function. This gives our tiger the opportunity to return something different than a cat would. But notice that if the tiger is not angry, then our `else` branch contains this line:
+* The `Tiger` class _overrides_ the `noise` method. When we invoke `hobbes.noise()`, we are invoking the `Tiger.noise` function. This gives our tiger the opportunity to return something different than a cat would. But notice that if the tiger is not angry, then our `else` branch contains this line:
 
   ```
   else:
       return Cat.noise(self)
   ```
 
-  That code essentially says: “I’m not angry, so I will just return whatever a Cat would normally return here.” In other words, the tiger *defers responsibility* to its cat superclass. You might say the tiger allows its more basic cat instincts to take over.
+  That code essentially says: “I’m not angry, so I will just return whatever a Cat would normally return here.” In other words, the tiger _defers responsibility_ to its cat superclass. You might say the tiger allows its more basic cat instincts to take over.
 
-To recap: inheritance allows you to define new types like `Tiger` by “extending” the code from previously defined types like `Cat`. A subclass like `Tiger` inherits all the functionality of its superclass, but can additionally define its own new attributes and methods (such as the `angry` method), and can override the implementation of preexisting methods (such as the `noise` method).
+To recap: inheritance allows you to define new types like `Tiger` by “extending” the code from previously defined types like `Cat`. A subclass like `Tiger` inherits all the functionality of its superclass, but can additionally define its own new attributes and methods \(such as the `angry` method\), and can override the implementation of preexisting methods \(such as the `noise` method\).
 
-## Another Cat Subclass
+## Another Cat Subclass - overriding methods, adding properties
+
+```python
+class Cat:
+
+    def __init__(self):
+        # every Cat comes into this world tired and hungry
+        self.tired = True
+        self.hungry = True
+
+    def sleep(self):
+        self.tired = False
+        # a Cat always wakes up hungry
+        self.hungry = True
+
+    def eat(self):
+        if self.hungry:
+            self.hungry = False
+        else:
+            # eating when already full makes a Cat sleepy
+            self.tired = True
+
+    def noise(self):
+        # sleepy cats say prrrr, energized cats say meow!
+        if self.tired:
+            return "prrrr"
+        else:
+            return "meow!"
+
+class HouseCat(Cat):
+
+    def __init__(self, name):
+        # first, initialize as a normal Cat
+        Cat.__init__(self)
+        # then set the name attribute
+        self.name = name
+
+    def satisfied(self):
+        return not self.hungry and not self.tired
+
+    def noise(self):
+        if self.satisfied():
+            return "Hello, my name is " + self.name + "!"
+        else:
+            return Cat.noise(self)
+
+garfield = HouseCat("Garfield")
+print("garfield says:", garfield.noise())
+garfield.sleep()
+print("After sleeping, garfield says:", garfield.noise())
+garfield.eat()
+print("After eating, garfield says:", garfield.noise())
+garfield.eat()
+print("After eating again, garfield says:", garfield.noise())
+```
+
+## Extending existing classes
+
+```python
+import turtle
+
+class StarTurtle(turtle.Turtle):
+
+    def star(self, numpoints, radius):
+        for i in range(0, numpoints):
+            self.forward(radius)
+            self.back(radius)
+            self.left(360 / numpoints)
+
+
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+
+tess = StarTurtle()
+tess.color("hotpink")
+
+# draw a star
+tess.star(7, 60)
+
+# move somewhere else
+tess.penup()
+tess.forward(30)
+tess.left(45)
+tess.pendown()
+
+# draw another star
+tess.color("blue")
+tess.star(15, 45)
+
+# and one more
+tess.color("yellow")
+tess.star(15, 30)
+```
+
+
+
