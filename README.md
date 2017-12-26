@@ -1,5 +1,6 @@
 # Think Python
-Notes from Think Python \(LaunchCode Edition\)
+
+Compiled notes from Think Python \(LaunchCode Edition\) and [Treehouse](https://teamtreehouse.com/) Python Tech Degree
 
 # Summary
 
@@ -14,8 +15,6 @@ Notes from Think Python \(LaunchCode Edition\)
 * [Dictionaries](dictionaries.md)
 * [Classes and Objects](classes-and-objects.md)
 * [Glossary](GLOSSARY.md)
-
-
 
 
 
