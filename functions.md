@@ -6,7 +6,12 @@
 ```python
 def name( parameters ):
     statements
+    
+def my_function_name():
+    print("this is the function body")
 ```
+
+Notice that the function's first line ends with a **colon** and the **function body**, the line or lines that belong to the function is **indented**.
 
 * name must follow the naming rules as before
 * parameters are data needed for the function to do what it needs to do
@@ -14,7 +19,7 @@ def name( parameters ):
 * **actual parameters** or **arguments** - values passed in function call
 * using the function is called **function call** or **function invocation**
 * **fruitful functions** - functions that return a value. In many other languages, a chunk that doesn't return a value is called a **procedure**.
-* separate function definitions with **two blank lines**
+* separate function definitions with **two blank lines** - PEP8
 
 #### `docstring` 
 

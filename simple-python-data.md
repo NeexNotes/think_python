@@ -41,6 +41,14 @@ print(type(str(123.45)))
 
 ### Variables
 
+Variables are names that point to particular pieces of data. In Python, we create a variable like this:
+
+```python
+variable_name = "variable value"
+```
+
+Not all values will need quote marks around them, but the format is always the same. The **variable name** on the left-hand side of the **single equals sign** and the **value** is on the right. This is known as: assignment statement.
+
 **Assignment statements** create new variables and also give them values to refer to.
 
 ```python
@@ -49,7 +57,7 @@ n = 17
 pi = 3.14159
 ```
 
-> **assignment token**`=`  should not be confused with **equality**
+> **assignment token** `=`  should not be confused with **equality**
 
 #### state snapshot
 

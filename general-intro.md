@@ -24,6 +24,10 @@ Thus, programs written in a high-level language \(and even those in assembly lan
 
 _Many modern languages use both processes_. They are first **compiled** into a lower level language, called byte code, and **then interpreted** by a program called a virtual machine. Python uses both processes, but because of the way programmers interact with it, it is usually considered an interpreted language.
 
+### Python high- or low- ???
+
+Python is compiled on the fly.
+
 ### Comments
 
 ```python
