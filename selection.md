@@ -32,6 +32,39 @@ def isDivisible(x, y):
     return x % y == 0
 ```
 
+### Truthy values
+
+Can be checked with `bool()`
+
+```python
+bool(1) # True
+bool(0)
+bool([])
+bool("")
+bool(" ") # True
+```
+
+### the *is* operation
+
+```python
+a = []
+b = []
+a is b
+>>> False
+```
+
+The *is* operator is rather useless as it checks memory address, but it is very useful for comparing to None.
+
+```python
+a is None
+>>> True # if of course a is None
+
+[1] == [1]
+>>> True
+[1] is [1]
+>>> False
+```
+
 ### Logical operators
 
 ```python
