@@ -44,7 +44,7 @@ bool("")
 bool(" ") # True
 ```
 
-### the *is* operation
+### the _is_ operation
 
 ```python
 a = []
@@ -53,7 +53,7 @@ a is b
 >>> False
 ```
 
-The *is* operator is rather useless as it checks memory address, but it is very useful for comparing to None.
+The _is_ operator is rather useless as it checks memory address, but it is very useful for comparing to None.
 
 ```python
 a is None
@@ -92,7 +92,8 @@ else:
 ```
 
 #### `unary` selection
-the result of any expression evaluation can be returned by a function (using the `return` statement), functions can return boolean values
+
+the result of any expression evaluation can be returned by a function \(using the `return` statement\), functions can return boolean values
 
 ```python
 if x < 0:
@@ -133,7 +134,8 @@ else:
 * Even if **more than one condition is true**, only the first true branch executes.
 
 #### `while` statement
-The while statement provides a much more general (than `for` loop) mechanism for iterating.
+
+The while statement provides a much more general \(than `for` loop\) mechanism for iterating.  
 The body of while will be repeated as long as the controlling boolean expression evaluates to True.
 
 We can use the `while` loop to create any type of iteration we wish, including anything that we have previously done with a `for` loop.
@@ -159,54 +161,52 @@ The body of the loop should change the value of one or more variables so that ev
 
 The string `'\t'` represents a **tab character**. The backslash character in `'\t'` indicates the beginning of an **escape sequence**. Escape sequences are used to represent invisible characters like tabs and newlines. The sequence `'\n'` represents a **newline**.
 
-
-
 ### 2-dimensional iteration - image manipulation
 
 #### RGB Color Model
 
 The amount of each color, sometimes called the **intensity** of the color, allows us to have very fine control over the resulting color.
 
-The minimum intensity value for a basic color is 0. For example if the red intensity is 0, then there is no red in the pixel. The maximum intensity is 255. 
+The minimum intensity value for a basic color is 0. For example if the red intensity is 0, then there is no red in the pixel. The maximum intensity is 255.
 
-| Color       | Red  | Green | Blue |
-| ----------- | ---- | ----- | ---- |
-| **Red**     | 255  | 0     | 0    |
-| **Green**   | 0    | 255   | 0    |
-| **Blue**    | 0    | 0     | 255  |
-| **White**   | 255  | 255   | 255  |
-| **Black**   | 0    | 0     | 0    |
-| **Yellow**  | 255  | 255   | 0    |
-| **Magenta** | 255  | 0     | 255  |
+| Color | Red | Green | Blue |
+| --- | --- | --- | --- |
+| **Red** | 255 | 0 | 0 |
+| **Green** | 0 | 255 | 0 |
+| **Blue** | 0 | 0 | 255 |
+| **White** | 255 | 255 | 255 |
+| **Black** | 0 | 0 | 0 |
+| **Yellow** | 255 | 255 | 0 |
+| **Magenta** | 255 | 0 | 255 |
 
 ```python
 import image
 ```
 
-**`image`** module has two classes: `Image` and `Pixel`. 
+`image` module has two classes: `Image` and `Pixel`.
 
 There are methods to work with images pixel-per-pixel.
 
-| Method Name  | Example          | Explanation                              |
-| ------------ | ---------------- | ---------------------------------------- |
-| Pixel(r,g,b) | Pixel(20,100,50) | Create a new pixel with 20 red, 100 green, and 50 blue. |
-| getRed()     | r = p.getRed()   | Return the red component intensity.      |
-| getGreen()   | r = p.getGreen() | Return the green component intensity.    |
-| getBlue()    | r = p.getBlue()  | Return the blue component intensity.     |
-| setRed()     | p.setRed(100)    | Set the red component intensity to 100.  |
-| setGreen()   | p.setGreen(45)   | Set the green component intensity to 45. |
-| setBlue()    | p.setBlue(156)   | Set the blue component intensity to 156. |
+| Method Name | Example | Explanation |
+| --- | --- | --- |
+| Pixel\(r,g,b\) | Pixel\(20,100,50\) | Create a new pixel with 20 red, 100 green, and 50 blue. |
+| getRed\(\) | r = p.getRed\(\) | Return the red component intensity. |
+| getGreen\(\) | r = p.getGreen\(\) | Return the green component intensity. |
+| getBlue\(\) | r = p.getBlue\(\) | Return the blue component intensity. |
+| setRed\(\) | p.setRed\(100\) | Set the red component intensity to 100. |
+| setGreen\(\) | p.setGreen\(45\) | Set the green component intensity to 45. |
+| setBlue\(\) | p.setBlue\(156\) | Set the blue component intensity to 156. |
 
 Methods to worth with image class:
 
-| Method Name         | Example                         | Explanation                              |
-| ------------------- | ------------------------------- | ---------------------------------------- |
-| Image(filename)     | img = image.Image(“cy.png”)     | Create an Image object from the file cy.png. |
-| EmptyImage()        | img = image.EmptyImage(100,200) | Create an Image object that has all “White” pixels |
-| getWidth()          | w = img.getWidth()              | Return the width of the image in pixels. |
-| getHeight()         | h = img.getHeight()             | Return the height of the image in pixels. |
-| getPixel(col,row)   | p = img.getPixel(35,86)         | Return the pixel at column 35, row 86.   |
-| setPixel(col,row,p) | img.setPixel(100,50,mp)         | Set the pixel at column 100, row 50 to be mp. |
+| Method Name | Example | Explanation |
+| --- | --- | --- |
+| Image\(filename\) | img = image.Image\(“cy.png”\) | Create an Image object from the file cy.png. |
+| EmptyImage\(\) | img = image.EmptyImage\(100,200\) | Create an Image object that has all “White” pixels |
+| getWidth\(\) | w = img.getWidth\(\) | Return the width of the image in pixels. |
+| getHeight\(\) | h = img.getHeight\(\) | Return the height of the image in pixels. |
+| getPixel\(col,row\) | p = img.getPixel\(35,86\) | Return the pixel at column 35, row 86. |
+| setPixel\(col,row,p\) | img.setPixel\(100,50,mp\) | Set the pixel at column 100, row 50 to be mp. |
 
 ### nested iteration
 
@@ -223,4 +223,6 @@ for row in range(img.getHeight()):
     for col in range(img.getWidth()):
         # do something with the pixel at position (col,row)
 ```
+
+
 

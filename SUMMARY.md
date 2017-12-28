@@ -7,6 +7,7 @@
 * [Turtles](turtles.md)
 * [Functions](functions.md)
 * [Iteration, Bool, Selection](selection.md)
+* image manipulation
 * [Strings](strings.md)
 * [Lists](lists.md)
 * [Tuples](tuples.md)
@@ -14,4 +15,5 @@
 * [Dictionaries](dictionaries.md)
 * [Classes and Objects](classes-and-objects.md)
 * [Glossary](GLOSSARY.md)
+* image manipulation
 
