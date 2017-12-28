@@ -61,12 +61,12 @@ Debugging tips:
 ### Errors in Python
 
 1. **ParseError** - error in the syntax
-2. **TypeError** - try to combine two objects that are not compatible
+2. **TypeError** - try to combine two objects that are not compatible *or* you tried to do something that a type of data can't do
 3. **NameError** - typo of any kind, in variable, in function, etc, use sth not there
 4. **ValueError** -  wrong value to work with, for example: `int("")`
 5. **URIError**
 6. **TokenError**
-7. **SyntaxError** -  if you write invalid syntax, bad code
+7. **SyntaxError** -  if you write invalid syntax, bad code, e.g. EOL for string errors
 8. **TimeLimitError**
 9. **IndentationError**
 10. **AttributeError**
@@ -74,3 +74,6 @@ Debugging tips:
 12. **IndexError**
 
 
+## Documentation
+
+[https://docs.python.org/3/library/exceptions.html?highlight=exceptions](https://docs.python.org/3/library/exceptions.html?highlight=exceptions)

@@ -220,3 +220,10 @@ def count(text, aChar):
 
 print(count("banana","a"))
 ```
+### sring.format()
+
+```python
+"My {} is {}".format("name", "Kenneth")
+```
+
+Python turns variable into string if they are not strings.

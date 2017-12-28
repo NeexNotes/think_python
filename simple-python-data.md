@@ -6,9 +6,9 @@
 
 **objects** are classified into different **classes** or **data types**:
 
-* integers \(4,5,6,7, natural numbers\)
-* floats \(4.3, floating-point numbers\)
-* strings \(text, any text, even number in text\) - single or double quote =&gt; absolutely no diff in Python
+* **integers** \(4,5,6,7, natural numbers\)
+* **floats** \(4.3, floating-point numbers\)
+* **strings** \(text, any text, even number in text\) - single or double quote =&gt; absolutely no diff in Python
 
 ### Type conversion functions
 
@@ -132,7 +132,7 @@ Expressions need to be evaluated. If you ask Python to `print` an expression, th
 * `+` addition
 * `-` subtraction
 * `*` multiplication
-* `/` division
+* `/` division - always results in a float `10 / 5 => 2.0`
 * `%` modulus
 * `**` exponent
 * `//` floor division, integer division
@@ -149,7 +149,7 @@ Expressions need to be evaluated. If you ask Python to `print` an expression, th
    2. `and`
    3. `or`
 
-**!!! Operators with the **_**same**_** precedence are evaluated from left-to-right \(except exponent\)**
+**!!! Operators with the same precedence are evaluated from left-to-right \(except exponent\)**
 
 ### Input
 
@@ -187,3 +187,13 @@ age /= 2 # 24.5
 **decrement** - subtracting 1
 
 **bumping** a variable  i.e. incrementing by 1
+
+### Explicitly removing a variable
+
+Python will garbage collect unused variables but it can be explicitly removed with the `del` keyword:
+
+```python
+name = "Hello Kevin"
+del name
+```
+

@@ -93,14 +93,15 @@ print(1 in fruit)
 ```python
 fruit = ["apple", "orange", "banana", "cherry"]
 print([1, 2] + [3, 4])
+>>> [1, 2, 3, 4]
+
 print(fruit + [6, 7, 8, 9])
+>>> ['apple', 'orange', 'banana', 'cherry', 6, 7, 8, 9]
 
 print([0] * 4)
-print([1, 2, ["hello", "goodbye"]] * 2)
-
->>> [1, 2, 3, 4]
->>> ['apple', 'orange', 'banana', 'cherry', 6, 7, 8, 9]
 >>> [0, 0, 0, 0]
+
+print([1, 2, ["hello", "goodbye"]] * 2)
 >>> [1, 2, ['hello', 'goodbye'], 1, 2, ['hello', 'goodbye']]
 ```
 
@@ -146,7 +147,7 @@ We can also **remove** elements from a list by **assigning the empty list** to t
 
 ```python
 alist = ['a', 'b', 'c', 'd', 'e', 'f']
-alist[1:3] = []
+alist[1:3] = [] # can be used to remove multiple elements
 print(alist)
 
 >>> ['a', 'd', 'e', 'f']
@@ -156,13 +157,22 @@ Using slices to delete list elements can be awkward and therefore error-prone. P
 
 ```python
 a = ['one', 'two', 'three']
-del a[1]
+del a[1] # can oly remove one element
 print(a)
 
 >>> ['one', 'three']
 ```
 
 **Alert!** `del` causes a runtime error if the index is out of range. But so does reassignment using `[]`.
+
+Using `remove()` will remove the first occurrence of the element.
+
+```python
+a_list = ['one', 'two', 'three']
+a_list.remove("one") # only the first (and one) element
+```
+
+
 
 ### Insert items
 
@@ -202,21 +212,23 @@ mylist.sort()                        # [3, 5, 5, 12, 12, 12, 27]
 mylist.remove(5)                    # [3, 5, 12, 12, 12, 27]
 lastitem = mylist.pop()                # [3,5,12,12,12]
 print(lastitem)                        # 27
+mylist.extend()
 ```
 
 The word **mutator** means that the list is changed by the method but nothing is returned \(actually `None` is returned\). A **hybrid** method is one that not only changes the list but also returns a value as its result. Finally, if the result is simply a return, then the list is unchanged by the method.
 
-| Method | Parameters | Result | Description |
-| --- | --- | --- | --- |
-| append | item | mutator | Adds a new item to the end of a list |
-| insert | position, item | mutator | Inserts a new item at the position given |
-| pop | none | hybrid | Removes and returns the last item |
-| pop | position | hybrid | Removes and returns the item at position |
-| sort | none | mutator | Modifies a list to be sorted |
-| reverse | none | mutator | Modifies a list to be in reverse order |
-| index | item | return idx | Returns the position of first occurrence of item |
-| count | item | return ct | Returns the number of occurrences of item |
-| remove | item | mutator | Removes the first occurrence of item |
+| Method  | Parameters     | Result     | Description                              |
+| ------- | -------------- | ---------- | ---------------------------------------- |
+| append  | item           | mutator    | Adds a new item to the end of a list     |
+| insert  | position, item | mutator    | Inserts a new item at the position given |
+| pop     | none           | hybrid     | Removes and returns the last item        |
+| pop     | position       | hybrid     | Removes and returns the item at position |
+| sort    | none           | mutator    | Modifies a list to be sorted             |
+| reverse | none           | mutator    | Modifies a list to be in reverse order   |
+| index   | item           | return idx | Returns the position of first occurrence of item |
+| count   | item           | return ct  | Returns the number of occurrences of item |
+| remove  | item           | mutator    | Removes **the first occurrence** of item. Must be in, otherwise ValueError appears. |
+| extend  | list           | mutator    | Extends with the elements in the given list |
 
 [More in documentation](https://docs.python.org/3/library/stdtypes.html#sequence-types-str-bytes-bytearray-list-tuple-range)
 
@@ -354,11 +366,17 @@ n = 2
 
 print([[a,b,c] for a in range(x + 1) for b in range(y + 1) for c in range(z + 1) if a + b + c != n])
 ```
-### Lists and strings
+### Lists and strings conversion LIST<>STRING 
+
+You can send iterable things to a `list()` to turn into a list.
 
 ```python
 string = "Hello you, how are you?"
-string.split()                             # by default breaks on space
+string.split()                       # by default breaks on white space
+# ['Hello', 'you,', 'how', 'are', 'you?']
+
+"name;age;address".split(";") 
+# ["name", "age", "address"]
 ```
 
 An optional argument called a **delimiter** can be used to specify which characters to use as word boundaries. The delimiter does not appear in the results.
@@ -388,6 +406,8 @@ print("".join(wds))
 >>> red***blue***green
 >>> redbluegreen
 ```
+
+You **cannot** join things that aren't strings. Doing `", ".join(5, 10, 15)` will give you an exception.
 
 #### Type conversion. To list. `list()`
 
