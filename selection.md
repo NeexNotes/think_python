@@ -44,7 +44,7 @@ bool("")
 bool(" ") # True
 ```
 
-### the _is_ operation
+### the *is* operation
 
 ```python
 a = []
@@ -53,7 +53,7 @@ a is b
 >>> False
 ```
 
-The _is_ operator is rather useless as it checks memory address, but it is very useful for comparing to None.
+The *is* operator is rather useless as it checks memory address, but it is very useful for comparing to None.
 
 ```python
 a is None
@@ -63,6 +63,26 @@ a is None
 >>> True
 [1] is [1]
 >>> False
+```
+
+### the *in* operation
+
+```python
+"py" in "python"
+>>> True
+
+5 in [3,4,5]
+>>> True
+```
+
+The not keyword ca be used both ways:
+
+```python
+if "a" not in "hello":
+    pass
+
+if not "a" in "hello":
+    pass
 ```
 
 ### Logical operators
@@ -92,8 +112,7 @@ else:
 ```
 
 #### `unary` selection
-
-the result of any expression evaluation can be returned by a function \(using the `return` statement\), functions can return boolean values
+the result of any expression evaluation can be returned by a function (using the `return` statement), functions can return boolean values
 
 ```python
 if x < 0:
@@ -134,8 +153,7 @@ else:
 * Even if **more than one condition is true**, only the first true branch executes.
 
 #### `while` statement
-
-The while statement provides a much more general \(than `for` loop\) mechanism for iterating.  
+The while statement provides a much more general (than `for` loop) mechanism for iterating.
 The body of while will be repeated as long as the controlling boolean expression evaluates to True.
 
 We can use the `while` loop to create any type of iteration we wish, including anything that we have previously done with a `for` loop.
@@ -161,68 +179,31 @@ The body of the loop should change the value of one or more variables so that ev
 
 The string `'\t'` represents a **tab character**. The backslash character in `'\t'` indicates the beginning of an **escape sequence**. Escape sequences are used to represent invisible characters like tabs and newlines. The sequence `'\n'` represents a **newline**.
 
-### 2-dimensional iteration - image manipulation
+### break me out of jail (or not) keywords
 
-#### RGB Color Model
+#### break
 
-The amount of each color, sometimes called the **intensity** of the color, allows us to have very fine control over the resulting color.
-
-The minimum intensity value for a basic color is 0. For example if the red intensity is 0, then there is no red in the pixel. The maximum intensity is 255.
-
-| Color | Red | Green | Blue |
-| --- | --- | --- | --- |
-| **Red** | 255 | 0 | 0 |
-| **Green** | 0 | 255 | 0 |
-| **Blue** | 0 | 0 | 255 |
-| **White** | 255 | 255 | 255 |
-| **Black** | 0 | 0 | 0 |
-| **Yellow** | 255 | 255 | 0 |
-| **Magenta** | 255 | 0 | 255 |
+You can stop a loop early by using the keyword `break`.
 
 ```python
-import image
+for letter in "abcdef":
+    if letter == "c":
+        break
+    print(letter)
 ```
 
-`image` module has two classes: `Image` and `Pixel`.
+This loop will print `"a"` and `"b"` and then stop because of the `break` when `letter` is `"c"`. `break` can only be used inside of a loop.
 
-There are methods to work with images pixel-per-pixel.
-
-| Method Name | Example | Explanation |
-| --- | --- | --- |
-| Pixel\(r,g,b\) | Pixel\(20,100,50\) | Create a new pixel with 20 red, 100 green, and 50 blue. |
-| getRed\(\) | r = p.getRed\(\) | Return the red component intensity. |
-| getGreen\(\) | r = p.getGreen\(\) | Return the green component intensity. |
-| getBlue\(\) | r = p.getBlue\(\) | Return the blue component intensity. |
-| setRed\(\) | p.setRed\(100\) | Set the red component intensity to 100. |
-| setGreen\(\) | p.setGreen\(45\) | Set the green component intensity to 45. |
-| setBlue\(\) | p.setBlue\(156\) | Set the blue component intensity to 156. |
-
-Methods to worth with image class:
-
-| Method Name | Example | Explanation |
-| --- | --- | --- |
-| Image\(filename\) | img = image.Image\(“cy.png”\) | Create an Image object from the file cy.png. |
-| EmptyImage\(\) | img = image.EmptyImage\(100,200\) | Create an Image object that has all “White” pixels |
-| getWidth\(\) | w = img.getWidth\(\) | Return the width of the image in pixels. |
-| getHeight\(\) | h = img.getHeight\(\) | Return the height of the image in pixels. |
-| getPixel\(col,row\) | p = img.getPixel\(35,86\) | Return the pixel at column 35, row 86. |
-| setPixel\(col,row,p\) | img.setPixel\(100,50,mp\) | Set the pixel at column 100, row 50 to be mp. |
-
-### nested iteration
-
-**Image processing** refers to the ability to manipulate the individual pixels in a digital image. In order to process all of the pixels, we need to be able to systematically visit all of the rows and columns in the image. The best way to do this is to use **nested iteration**.
+#### continue
 
 ```python
-for i in range(5):
-    for j in range(3):
-        print(i, j)
+for letter in "abcdef":
+    if letter == "c":
+        continue
+    print(letter)
 ```
 
-```python
-for row in range(img.getHeight()):
-    for col in range(img.getWidth()):
-        # do something with the pixel at position (col,row)
-```
+Nearly the same loop but this one will print `"a"`, `"b"`, `"d"`, `"e"`, and `"f"`. It skips `"c"` because of the `continue`, which causes the loop to immediately move on to the next step in the loop.
 
-
+Like `break`, `continue` can only be used inside of a loop.
 
