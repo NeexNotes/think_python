@@ -62,11 +62,11 @@ Debugging tips:
 
 1. **ParseError** - error in the syntax
 2. **TypeError** - try to combine two objects that are not compatible
-3. **NameError** - typo of any kind, in variable, in function, etc
+3. **NameError** - typo of any kind, in variable, in function, etc, use sth not there
 4. **ValueError** -  wrong value to work with, for example: `int("")`
 5. **URIError**
 6. **TokenError**
-7. **SyntaxError**
+7. **SyntaxError** -  if you write invalid syntax, bad code
 8. **TimeLimitError**
 9. **IndentationError**
 10. **AttributeError**

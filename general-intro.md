@@ -43,5 +43,55 @@ docstring comments and multi-line comments
 '''
 ```
 
+### Python shell
 
+Python REPL can be used in terminal via:
+
+* `python` or `python3` depending on installation
+* `exit()`
+* `quit()`
+
+Or in IDLE that comes with python. 
+
+### Python help
+
+In REPL / Shell:
+
+```python
+help()
+Welcome to Python 3.6's help utility!
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the Internet at http://docs.python.org/3.6/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type "quit".
+
+To get a list of available modules, keywords, symbols, or topics, type
+"modules", "keywords", "symbols", or "topics".  Each module also comes
+with a one-line summary of what it does; to list the modules whose name
+or summary contain a given string such as "spam", type "modules spam".
+
+help> 
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type "help(object)".  Executing "help('string')"
+has the same effect as typing a particular string at the help> prompt.
+>>> help(str)
+>>> help(str.__add__)
+"""
+__add__(self, value, /)
+    Return self+value.
+(END)
+"""
+
+# press q to exit long text
+```
+
+### Python from files
+
+1. make a file `this_is_my_file.py`
+2. put code in it
+3. run from terminal: `python this_is_my_file.py`
 
