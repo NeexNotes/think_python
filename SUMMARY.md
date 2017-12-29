@@ -17,6 +17,6 @@
 * [Glossary](GLOSSARY.md)
 * [Input / Output](input-output.md)
 * Example Code
-  * shopping list
+  * [shopping list](shopping-list.md)
   * number game
 
