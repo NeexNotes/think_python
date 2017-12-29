@@ -18,5 +18,5 @@
 * [Input / Output](input-output.md)
 * Example Code
   * [shopping list](shopping-list.md)
-  * number game
+  * [number game](number-game.md)
 
