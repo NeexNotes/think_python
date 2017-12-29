@@ -16,4 +16,7 @@
 * [Classes and Objects](classes-and-objects.md)
 * [Glossary](GLOSSARY.md)
 * [Input / Output](input-output.md)
+* Example Code
+  * shopping list
+  * number game
 
